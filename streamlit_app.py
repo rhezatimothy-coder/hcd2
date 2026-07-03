@@ -33,3 +33,27 @@ div[data-testid="stCheckbox"] label {
 }
 </style>
 """, unsafe_allow_html=True)
+
+@st.cache_resource
+def load_model():
+    with open('hospital_model.pkl','rb') as f:
+        return pickle.load(f)
+
+bundle= load_model()
+model = bundle['model']
+scaler = bundle['scaler']
+features = bundle['features']
+cols_to_scale = bundle['cols_to_scale']
+dept_map = bundle['dept_map']
+dept_map_inv = bundle['dept_map_inv']
+gender_map = bundle['gender_map']
+temp_map = bundle['temp_map']
+hr_map = bundle['hr_map']
+dur_map = bundle['dur_map']
+cc_map = bundle['cc_map']
+
+DEPT_INFO = {
+    'Respiratory Medicine':{
+        'icon':'lung_icon','desc':'Specializing in conditions affecting the lungs'
+    },'Cardiology','Gastroenterology'
+}
