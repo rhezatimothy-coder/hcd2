@@ -6,7 +6,7 @@ import os
 
 st.set_page_config(page_title="Smart Hospital Patient Navigator", page_icon="🏥", layout="wide")
 
-@st.markdown("""
+st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
@@ -32,4 +32,4 @@ div[data-testid="stCheckbox"] label {
     font-size: 14px !important; font-weight: 500 !important; color: #374151 !important;
 }
 </style>
-""",unsafe_allow_html=True)
+""", unsafe_allow_html=True)
