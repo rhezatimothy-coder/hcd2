@@ -121,4 +121,7 @@ with st.form("triage_form"):
     with c1:
         fever = st.checkbox ("Fever")
         cough = st.checkbox ("Cough")
+        heartache = st.checkbox ("Got Dumped")
+    with c2:
+        headache = st.checkbox ("Headache")
 
